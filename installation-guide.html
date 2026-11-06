@@ -157,7 +157,9 @@
         <table class="fields">
           <thead><tr><th>What</th><th>Where</th></tr></thead>
           <tbody>
-            <tr><td>RADIXPhone Windows Service</td><td class="desc">Running, start type Automatic</td></tr>
+            <tr><td>RADIXPhone Windows Service</td><td class="desc">Running as Local System, start type <strong>Automatic (Delayed Start)</strong>; restarts itself after a failure (first, second and later failures: after 5&nbsp;s, 15&nbsp;s, 60&nbsp;s), also when it stops with an error</td></tr>
+            <tr><td>Single instance</td><td class="desc">Only one RADIX Phone can run per PC (all users and sessions). A second copy exits immediately and the running one is not affected.</td></tr>
+            <tr><td>Windows Firewall rule</td><td class="desc"><code class="field">RADIX Phone (SIP/RTP)</code> &mdash; allows incoming UDP for <code class="field">RADIXPhone.exe</code>; removed on uninstall. The phone-screen (TCP) port is not opened.</td></tr>
             <tr><td>Client files &amp; config</td><td class="desc"><code class="field">{app}\Client</code></td></tr>
             <tr><td>Configuration Editor</td><td class="desc"><code class="field">{app}\ConfigEditor\RadixConfigEditor.exe</code></td></tr>
             <tr><td>Start Menu shortcuts</td><td class="desc">"RADIX Phone" and "RADIX Phone Configuration"</td></tr>
